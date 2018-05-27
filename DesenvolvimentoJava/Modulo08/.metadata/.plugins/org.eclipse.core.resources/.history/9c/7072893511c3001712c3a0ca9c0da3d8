@@ -1,0 +1,15 @@
+package br.com.seniorsolution.abstractfactory;
+
+public class MasterComunicacaoFactory {
+	
+	private EmissorCreator  emissorCreator = new EmissorCreator();
+	private ReceptorCreator receptorCreator = new ReceptorCreator();
+	
+	public Emissor createEmissor() {
+		return emissorCreator.create(TipoEmissor.MASTER);
+	}
+	
+	public Receptor createReceptor() {
+		return receptorCreator.create(TipoEmissor.MASTERVISA);
+	}
+}

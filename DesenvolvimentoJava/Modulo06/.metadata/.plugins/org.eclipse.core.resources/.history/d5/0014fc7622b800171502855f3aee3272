@@ -1,0 +1,48 @@
+$(document).ready(function(){
+	let request, db;
+	// abrindo ou cirando o banco de dados
+	
+	request = window.indexedDB.open("DBCandidatos");
+	
+	// eventos usados ao abrir o banco de dadeos
+	
+	request.onerror = function(event) {
+		$("#mensagemdb").html("Erro ao abrir o banco de dados");
+	}
+	
+	request.onsuccess = function(event) {
+		$("#mensagemdb").html("Banco de dados aberto com sucesso");
+		db = event.target.result;
+	}
+	
+	request.onupgradeneeded = function(event){
+		$("#mensagemdb").html("Banco de dados preparado");
+		db = event.target.result;
+		
+		let objectStore = db.createObjectStore("candidatos", 
+				{keyPath: "cpf"})
+	}
+	
+	// evento para incluir um novo registro
+	$("#btnEnviar").click(function(){
+		let nome = $("#nome").val();
+		let telefone = $("#telefone").val();
+		
+		let transaction = db.transaction(["pessoas"], "readwrite");
+		transaction.oncomplete = function(event){
+			$("#mensagemdb").html("registro incluido");
+		}
+		transaction.onerror = function(event){
+			$("#mensagemdb").html("ocorreu um erro");
+		}
+		let objectStore = transaction.objectStore("pessoas");
+		objectStore.add({nome, telefone});
+	})
+	
+	$("#enviar").click(function(){
+		let cpf = $("#cpf").val();
+		let nome = $("#nome").val();
+		let telefone = $("#telefone").val();
+		let email = $("#email").val();
+	})
+})

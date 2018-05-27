@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Lista de Revisões</title>
+</h:head>
+<h:body>
+	<ui:composition template="layout.xhtml">
+		<ui:define name="conteudo">
+		<h1>Lista de Revisões feitas</h1>
+		<h:selectOneMenu value="#{bRevisao.codLivro}" valueChangeListener="#{bRevisao.valueChangeMethod}">
+					<f:selectItem itemValue="" itemLabel="Selecione um livro" />
+					<f:selectItems value="#{bRevisao.listaLivros}" var="livro" itemLabel="#{livro.titulo}" itemValue="#{livro.codigo}"  />
+				</h:selectOneMenu>
+		<ui:repeat value="#{bRevisao.revisoes}" var="revisao">
+			#{revisao.descricao}
+		</ui:repeat>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

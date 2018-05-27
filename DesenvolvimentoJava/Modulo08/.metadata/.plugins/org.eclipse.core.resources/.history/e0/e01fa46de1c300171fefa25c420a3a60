@@ -1,0 +1,22 @@
+package br.com.seniorsolution.decorator;
+
+public class TesteEmissorDecorator {
+
+	public static void main(String[] args) {
+		String mensagem = "#####";
+		
+		Emissor basico = new EmissorBasico();
+		basico.enviar(mensagem);
+		System.out.println();
+		
+		Emissor cripto = new EmissorDecoratorCripto(new EmissorBasico());
+		cripto.enviar(mensagem);
+		System.out.println();
+		
+		Emissor completo = new EmissorDecoratorCompress(
+				new EmissorDecoratorCripto(
+						new EmissorBasico()));
+		completo.enviar(mensagem);
+		System.out.println();
+	}
+}

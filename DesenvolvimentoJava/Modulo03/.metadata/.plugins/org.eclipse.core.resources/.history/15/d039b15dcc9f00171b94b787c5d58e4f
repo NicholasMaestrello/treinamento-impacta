@@ -1,0 +1,13 @@
+package br.com.seniorsolution.entidade;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Forum implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	private String assunto;
+	private String descricao;
+}

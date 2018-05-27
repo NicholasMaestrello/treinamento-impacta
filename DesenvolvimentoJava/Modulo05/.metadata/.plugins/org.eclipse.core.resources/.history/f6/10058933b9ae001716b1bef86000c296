@@ -1,0 +1,84 @@
+package br.com.seniorsolution.bean;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
+import javax.faces.event.ValueChangeEvent;
+
+import br.com.seniorsolution.dao.GenericDao;
+import br.com.seniorsolution.entity.Livro;
+import br.com.seniorsolution.entity.Revisao;
+
+@ManagedBean(name="bRevisao")
+@SessionScoped
+public class RevisaoBean {
+
+	@ManagedProperty(value="#{beanRevisao}")
+	private Revisao revisao;
+	private int codLivro;
+	private List<Revisao> revisoes;
+
+	//	public RevisaoBean() {
+	//		this.revisao = new Revisao();
+	//	}
+
+	public Revisao getRevisao() {
+		return revisao;
+	}
+
+	public void setRevisao(Revisao revisao) {
+		this.revisao = revisao;
+	}
+
+
+	public int getCodLivro() {
+		return codLivro;
+	}
+
+	public void setCodLivro(int codLivro) {
+		this.codLivro = codLivro;
+	}
+
+	public List<Revisao> getRevisoes() {
+		return revisoes;
+	}
+
+	public void setRevisoes(List<Revisao> revisoes) {
+		this.revisoes = revisoes;
+	}
+
+	public List<Livro> getListaLivros(){
+		GenericDao<Livro> dao = new GenericDao<Livro>(Livro.class);
+		return dao.listar();
+	}
+
+	public String incluirRevisao() {
+		System.out.println("Entrou no metodo");
+		try {
+			GenericDao<Livro> daoLivro = new GenericDao<Livro>(Livro.class);
+			this.getRevisao().setLivro(daoLivro.buscar(this.getCodLivro()));
+			GenericDao<Revisao> daoRev = new GenericDao<Revisao>(Revisao.class);
+			daoRev.adicionar(this.getRevisao());
+			return "sucesso";
+		} catch (Exception e) {
+			return "erro";
+		}
+	}
+
+	public void alterarRevisoes(ValueChangeEvent e){
+		try {
+			System.out.println("entrou aqui !");
+			int codLivro = (Integer) e.getNewValue();
+			System.out.println(codLivro);
+			GenericDao<Revisao> dao = new GenericDao<Revisao>(Revisao.class);
+			this.setRevisoes(dao.listarRevisoes(codLivro));
+		} catch (Exception e1) {
+			System.out.println("tttt");
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	}
+
+}

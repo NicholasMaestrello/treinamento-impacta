@@ -1,0 +1,15 @@
+package br.com.seniorsolution.decorator;
+
+public class EmissorDecoratorCripto extends EmissorDecorator {
+
+	public EmissorDecoratorCripto(Emissor emissor) {
+		super(emissor);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void enviar(String mensagem) {
+		// TODO Auto-generated method stub
+		
+	}
+}

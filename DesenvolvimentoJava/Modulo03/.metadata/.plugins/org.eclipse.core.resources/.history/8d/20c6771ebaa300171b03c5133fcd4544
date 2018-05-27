@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cadastro de endereços - JSTL</title>
+</head>
+<body>
+	<%@ taglib="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	<jsp:useBean id="clienteBean" class="br.com.seniorsolution.beans.BeanVendas"></jsp:useBean>
+	<h1>Cadastro de endereços para clientes - JSTL</h1>
+
+	<form action="endereco" method="post">
+		<label>Cliente</label><br />
+		<select name="cliente">
+			<option value=""></option>
+		</select><br /> <label for="rua">Rua</label><br />
+		 <input name="rua" id="rua" /><br />
+		<label for="cidade">Cidade</label><br/>
+		 <input name="cidade" id="cidade" /><br />
+		<label for="cep">Cep</label><br />
+		 <input name="cep" id="cep" /><br />
+		 <input type="submit" value="enviar" />
+	</form>
+	${mensagem}
+</body>
+</html>

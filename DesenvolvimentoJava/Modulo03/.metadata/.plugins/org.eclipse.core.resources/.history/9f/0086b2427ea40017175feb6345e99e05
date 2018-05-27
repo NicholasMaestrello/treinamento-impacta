@@ -1,0 +1,13 @@
+package br.com.seniorsolution.beans;
+
+import java.util.List;
+
+import br.com.seniorsolution.dao.GenericDao;
+import br.com.seniorsolution.entidades.Cliente;
+
+public class BeanVendas {
+	public List<Cliente> getListaClientes(){
+		GenericDao<Cliente> dao = new GenericDao<>(Cliente.class);
+		return dao.listar();
+	}
+}

@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTf-8">
+<title>Cadastro de clientes</title>
+</head>
+<body>
+	<h1>Cadastro de clientes</h1>
+	<form action="" method="post">
+		<label>Código :</label><br/>
+		<input type="text" name="codigo" id="codigo" size="5"/><br/>
+		<label>Empresa :</label><br/>
+		<input type="text" name="empresa" id="empresa" size="20"/><br/>
+		<input type="submit" value="Enviar"/>
+	</form>
+</body>
+</html>

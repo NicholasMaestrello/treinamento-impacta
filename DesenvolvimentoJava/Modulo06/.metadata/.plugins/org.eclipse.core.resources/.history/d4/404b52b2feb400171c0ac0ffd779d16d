@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Exemplo de jquery - ajax</title>
+</head>
+<body>
+
+	<label for="estado">Estado:</label><br/>
+	<select id="estado">
+		<option>Selecione o estado</option>
+	</select><br/>
+	<label for="cidade">Cidade:</label><br/>
+	<select id="cidade">
+	
+	</select><br/>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="exemplo_jquery03.js" type="text/javascript"></script>
+</body>
+</html>

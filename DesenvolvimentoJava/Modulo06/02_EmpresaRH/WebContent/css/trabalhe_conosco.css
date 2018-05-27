@@ -1,0 +1,21 @@
+body {
+	clear: both;
+	padding: 25px;
+}
+
+.margin-image{
+	margin: 10px;
+}
+
+.footer{
+	bottom:0;
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	background-color: #7F7F7F;
+	color: white;
+}
+
+.cadastrados{
+	border: 2px solid blue;
+}

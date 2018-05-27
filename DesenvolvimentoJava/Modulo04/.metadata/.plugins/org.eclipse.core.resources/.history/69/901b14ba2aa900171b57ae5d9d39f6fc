@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastro de usuarios</title>
+</head>
+<body>
+	
+	<h1>Login</h1>
+	<form action=href=<c:url value="/cadusuario"/>>
+		<label>Nome</label><br/>
+		<input type="text" name="nome"><br/>
+		<label>Senha</label><br/>
+		<input type="password" name="senha"><br/>
+		<input type="submit" value="Logar"><br/>
+	</form>
+
+</body>
+</html>

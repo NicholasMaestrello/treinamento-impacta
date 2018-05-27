@@ -1,0 +1,17 @@
+package br.com.seniorsolution.flyweight;
+
+public class Documento {
+
+	private TemaFlyWeight tema;
+	private String Titulo;
+	private String texto;
+	
+	private Documento(TemaFlyWeight tema,String titulo, String texto) {
+		this.tema = tema;
+		this.Titulo = Titulo;
+		this.texto = texto;
+	}
+	
+	public void imprimir() {
+		this.tema.imprimir(titulo, texto);
+	}

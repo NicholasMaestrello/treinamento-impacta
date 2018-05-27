@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Visualizar elementos armazenados</h1>
+	<input type="button" id="botao" value="clique para visualizar" />
+	<ul id="lista"></ul>
+	
+	<script type="text/javascript">
+		sessionStorage.setItem("curso", "Javascript")
+		sessionStorage.setItem("empresa", "sennior Solution")
+		
+		let cursos = ["Excel", 'powerPoint', 'Android', 'Java']
+		
+		cursos.forEach(function(i, e, a){
+			sessionStorage.setItem(`chave ${i}`, e)
+		})
+		let botao = document.getElementById("botao")
+	</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+package br.com.seniorsolution.adapter;
+
+public class TesteControlePonto {
+
+	public static void main(String[] args) throws InterruptedException {
+		ControlePonto cp = new ControlePonto();
+		Funcionario f = new Funcionario("Matheus", "motoboy");
+		cp.registrarEntrada(f);
+		
+		Thread.sleep(5000);
+		
+		cp.registrarSaida(f);
+	}
+}

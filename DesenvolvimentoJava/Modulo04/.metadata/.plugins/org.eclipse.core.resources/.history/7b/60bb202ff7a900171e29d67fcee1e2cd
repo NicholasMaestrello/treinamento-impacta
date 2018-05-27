@@ -1,0 +1,6 @@
+erro.escola.descricao=A descricao deve ter entre {min} e {max} caracteres
+erro.curso.descricao=A descricao deve ter entre {min} e {max} caracteres
+erro.disciplina.descricao=A descricao deve ter entre {min} e {max} caracteres
+erro.disciplina.cargahoraria=A caraga horaria deve ter entre {min} e {max} horas
+erro.usuario.nome=O nome deve ter entre {min} e {max} caracteres
+erro.usuario.senha=A senhadeve ter entre {min} e {max} caracteres

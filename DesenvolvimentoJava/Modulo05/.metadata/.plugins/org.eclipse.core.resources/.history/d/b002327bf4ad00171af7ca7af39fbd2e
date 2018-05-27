@@ -1,0 +1,35 @@
+package br.com.seniorsolution.bean;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+import br.com.seniorsolution.dao.GenericDao;
+import br.com.seniorsolution.entity.Livro;
+import br.com.seniorsolution.entity.Revisao;
+
+@ManagedBean(name="bRevisao")
+@RequestScoped
+public class RevisaoBean {
+
+	private Revisao revisao;
+	
+	public RevisaoBean() {
+		this.revisao = new Revisao();
+	}
+
+	public Revisao getRevisao() {
+		return revisao;
+	}
+
+	public void setRevisao(Revisao revisao) {
+		this.revisao = revisao;
+	}
+	
+	public List<Livro> getListaLivros(){
+		GenericDao<Livro> dao = new GenericDao<Livro>(Livro.class);
+		return dao.listar();
+	}
+	
+}

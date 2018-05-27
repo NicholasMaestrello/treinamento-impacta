@@ -1,0 +1,25 @@
+$(document).ready(function(){
+	
+	let assuntos = [
+		{codigo: 0, descricao: 'Reclamações'},
+		{codigo: 1, descricao: 'Informações'},
+		{codigo: 3, descricao: 'Pedido'}
+	]
+	
+	assuntos.forEach(function(element, index, array){
+		$("#assunto").append($("<option>", {
+			value: element.codigo,
+			text: element.descricao
+		}))
+	})
+	
+	let nome = $("#nome").val()
+	let email = $("#email").val()
+	let assunto = $("#assunto").val()
+	let comentario = $("#comentario").val()
+	let btnEnviar = $("#enviar")
+	
+	btn.click(function(){
+		alert("funcionou botao")
+	})
+})

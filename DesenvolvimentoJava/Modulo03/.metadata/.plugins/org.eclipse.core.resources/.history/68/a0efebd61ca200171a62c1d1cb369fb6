@@ -1,0 +1,7 @@
+package br.com.seniorsolution.aplicacao;
+
+public class AppUsuario {
+	public static void main(String[] args) {
+//		criar um usuario e o adicionar a um forum existente
+	}
+}

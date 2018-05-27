@@ -1,0 +1,17 @@
+package br.com.seniorsolution.executaveis;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+import br.com.seniorsolution.entity.Aluno;
+import br.com.seniorsolution.entity.Curso;
+import br.com.seniorsolution.entity.Disciplina;
+
+public class Executavel1 {
+
+	public static void main(String[] args) {
+		Set<Disciplina> disciplinasADS = new LinkedHashSet<>();
+		disciplinasADS.add(new Disciplina("ED", 300.00));
+		
+	}
+}

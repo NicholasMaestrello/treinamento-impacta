@@ -1,0 +1,69 @@
+package br.com.seniorsolution.servelet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import br.com.seniorsolution.dao.GenericDao;
+import br.com.seniorsolution.entidades.Cliente;
+import br.com.seniorsolution.entidades.Pedido;
+
+/**
+ * Servlet implementation class ServeletConsultas
+ */
+@WebServlet("/consultas")
+public class ServeletConsultas extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ServeletConsultas() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.sendRedirect("consultas.jsp");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		try {
+			String opcao = request.getParameter("opcao");
+			String resultado = "";
+			switch(opcao) {
+			case "pedidos":
+				int idCliente = Integer.parseInt(request.getParameter("cliente"));
+				Cliente c = new GenericDao<>(Cliente.class).buscar(idCliente);
+				System.out.println(c);
+				for(Pedido p : c.getPedidos()) {
+					resultado += p.getPedidoPK() + "<br/>";
+				}
+				break;
+			case "itens":
+				resultado = "A ser implementado";
+				break;
+			}
+			request.setAttribute("resultado", resultado);
+			request.getRequestDispatcher("consultas.jsp").forward(request, response);
+		} catch (Exception e) {
+			// TODO: handle exception
+			request.setAttribute("resultado", e.getMessage());
+			request.getRequestDispatcher("consultas.jsp").forward(request, response);
+		}
+	}
+
+}

@@ -1,0 +1,40 @@
+package br.com.seniorsolution.bean;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+import br.com.seniorsolution.dao.GenericDao;
+import br.com.seniorsolution.entity.Usuario;
+
+@ManagedBean(name="bUsuario")
+@RequestScoped
+public class UsuariosBean {
+
+	private Usuario usuario;
+	
+	public UsuariosBean() {
+		usuario = new Usuario();
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
+	public String logIn() {
+		Usuario novo = new Usuario();
+		try {
+			GenericDao<Usuario> dao = new GenericDao<Usuario>(Usuario.class);
+			novo = dao.buscar(usuario.getId());
+			if(novo.getSenha() == usuario.getSenha())
+				return "admin/menu";
+			return "erro";
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "erro"
+;		}
+	}
+}

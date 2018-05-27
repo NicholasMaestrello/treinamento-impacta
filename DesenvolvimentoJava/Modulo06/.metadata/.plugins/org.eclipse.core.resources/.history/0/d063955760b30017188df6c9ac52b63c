@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index padrão html5</title>
+</head>
+<body>
+	<p>Introdução ao html 5</p>
+	<div class="margem margem-titulo">
+		<p>Topicos estudados</p>
+	</div>
+	<div class="margem margem-conteudo">
+		<div class="cabecalho">
+			HTML5
+		</div>
+		<div class="texto">
+			<ul>
+				<li>Elementos do html5</li>
+				<li>Formularios</li>
+				<li>Responsividade</li>
+				<li>Bootstrap</li>
+			</ul>
+		</div>
+		<div class="rodape">
+			Elaborado pela turma de desenvolvimento JAVA
+		</div>
+	</div>
+</body>
+</html>

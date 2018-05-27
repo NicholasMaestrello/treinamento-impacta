@@ -1,0 +1,3 @@
+erro.escola.descricao=A descricao deve ter entre {min} e {max} caracteres
+erro.curso.descricao=A descricao deve ter entre {min} e {max} caracteres
+erro.disciplina.descricao=A descricao deve ter entre {min} e {max} caracteres

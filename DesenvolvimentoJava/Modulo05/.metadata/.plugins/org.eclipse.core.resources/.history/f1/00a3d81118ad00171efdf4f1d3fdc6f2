@@ -1,0 +1,52 @@
+package br.com.seniorsolution.bean;
+
+import java.io.InputStream;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.servlet.http.Part;
+
+import br.com.seniorsolution.dao.GenericDao;
+import br.com.seniorsolution.entity.Livro;
+
+//@ManagedBean
+@ManagedBean(name="bLivro")
+@RequestScoped
+public class LivrosBean {
+
+	private Livro livro;
+	private Part part;
+	
+	public LivrosBean() {
+		livro = new Livro();
+	}
+
+	public Livro getLivro() {
+		return livro;
+	}
+	public void setLivro(Livro livro) {
+		this.livro = livro;
+	}
+	public Part getPart() {
+		return part;
+	}
+	public void setPart(Part part) {
+		this.part = part;
+	}
+	
+	public String incluirLivro() {
+		try {
+			InputStream inputStream = this.getPart().getInputStream();
+			byte[] img = new byte[(int)this.getPart().getSize()];
+			inputStream.read(img, 0, (int)this.getPart().getSize());
+			livro.setImagem(img);
+			
+			
+			GenericDao<Livro> dao = new GenericDao<Livro>(Livro.class);
+			dao.adicionar(this.livro);
+			return "sucesso";
+		} catch (Exception e) {
+			return "erro";
+		}
+	}
+}

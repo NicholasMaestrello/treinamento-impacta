@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cadastro de endereços</title>
+</head>
+<body>
+	<h1>Cadastro de endereços para clientes</h1>
+	<% %>
+	<form action="clientes" post="form">
+		<label>Cliente</label>
+		<select name="cliente">
+			<option value="1234">e de casa</option>
+			<option value="100">senior</option>
+			<option value="200">nexo ar</option>
+		</select><br/>
+		<label for="rua">Rua</label><br/>
+		<input name="rua" id="rua" /><br/>
+		<label for="cidade">Cidade</label>
+		<input name="cidade" id="cidade" /><br/>
+		<label for="cep">Cep</label><br/>
+		<input name="cep" id="cep" /><br/>
+	</form>
+</body>
+</html>

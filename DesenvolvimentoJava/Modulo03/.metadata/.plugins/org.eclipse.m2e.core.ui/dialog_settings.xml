@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="br.com.seniorsolution.mavenweb"/>
+			<item value="br.com.seniorsolution.mavenjpa"/>
+		</list>
+		<list key="name">
+			<item value="vendasJPA"/>
+			<item value="Conceitos JPA"/>
+		</list>
+		<list key="artifactId">
+			<item value="02_VendasWEB"/>
+			<item value="01_ConceitosJPA"/>
+		</list>
+		<list key="version">
+			<item value="1.0.0"/>
+			<item value="0.0.1"/>
+		</list>
+	</section>
+</section>

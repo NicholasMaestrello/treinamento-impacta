@@ -1,0 +1,44 @@
+package br.com.seniorsolution.bean;
+
+import javax.annotation.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.servlet.http.Part;
+
+import br.com.seniorsolution.dao.GenericDao;
+import br.com.seniorsolution.entity.Livro;
+
+//@ManagedBean
+@ManagedBean(name="bLivro")
+@RequestScoped
+public class LivrosBean {
+
+	private Livro livro;
+	private Part part;
+	
+	public LivrosBean() {
+		livro = new Livro();
+	}
+
+	public Livro getLivro() {
+		return livro;
+	}
+	public void setLivro(Livro livro) {
+		this.livro = livro;
+	}
+	public Part getPart() {
+		return part;
+	}
+	public void setPart(Part part) {
+		this.part = part;
+	}
+	
+	public String incluirLivro() {
+		try {
+			GenericDao<Livro> dao = new GenericDao<Livro>(Livro.class);
+			dao.adicionar(this.livro);
+			return "sucesso";
+		} catch (Exception e) {
+			return "erro";
+		}
+	}
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>trabalhe conosco</title>
+	<link href="css/estilo.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+</head>
+<body>
+	<h1>Envie suas informações de contato</h1>
+	<div class="row">
+	</div>
+</body>
+</html>

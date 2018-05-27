@@ -1,0 +1,18 @@
+package br.com.seniorsolution.controllers;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.br.sennior.dao.GenericDao;
+import com.br.sennior.entidades.Produto;
+
+@Controller
+public class HomeController {
+
+	@RequestMapping(value= {"/wsjson"})
+	public List<Produto> buscarProdutos(){
+		return new GenericDao<>(Produto.class).listar();
+	}
+}

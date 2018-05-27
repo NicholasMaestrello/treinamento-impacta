@@ -1,0 +1,10 @@
+package br.com.seniorsolution.singleton;
+
+public class GenericDao {
+
+	//singleton: mantem apenas uma instancia de uma classe, desde que essa instancia se faça necessaria
+	public void incluir() {
+		
+	}
+	public List<String> listar(){}
+}

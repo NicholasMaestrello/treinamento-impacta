@@ -1,0 +1,3 @@
+Recibo: \r\nEmissor :Impacta
+Cliente: Senior
+Valor: 100.0

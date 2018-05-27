@@ -1,0 +1,29 @@
+package br.com.seniorsolution.proxy;
+
+public class ContaProx implements Conta {
+
+	private Conta conta;
+	
+	public ContaProx(Conta conta) {
+		this.conta = conta;
+	}
+	
+	@Override
+	public void depositar(double valor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sacar(double valor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public double getSaldo() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

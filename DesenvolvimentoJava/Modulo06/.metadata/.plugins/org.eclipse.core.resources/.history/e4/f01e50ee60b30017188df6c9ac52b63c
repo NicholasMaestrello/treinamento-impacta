@@ -1,0 +1,34 @@
+body{
+		background-color: lightyellow;
+	}
+	
+	.margem{
+		margin-left: 20px;
+		margin-right: 20px;
+		padding: 25px;
+	}
+	
+	.margem-titulo{
+		font-family: Verdana, Tahoma;
+		font-size: 30px;
+		background-color: #00FFFF;
+	}
+	.margem-conteudo{
+		border: 1px solid #884513;
+		color: blue;
+		border-radius: 5px;
+	}
+	.cabecalho{
+		font-weight: bold;
+		color:#DC8Ff8F;
+	}
+	.texto{
+		font-family: Tahoma;
+		font-size: 12px;
+	}
+	.rodape{
+		font-size:10px;
+		background-color: #696969;
+		color: #FFFFFF;
+		text-align: center;
+	}

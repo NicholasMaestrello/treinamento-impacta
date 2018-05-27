@@ -1,0 +1,70 @@
+package br.com.seniorsolution.controllers;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import br.com.seniorsolution.entidades.Usuario;
+import br.com.seniorsolution.jdbc.JdbcUsuarioDao;
+import br.com.seniorsolution.utils.Md5;
+import br.com.seniorsolution.utils.Nivel;
+
+@Controller
+public class LoginController {
+	
+	@RequestMapping(value= {"/"})
+	public String logar() {
+		
+		return "paginas/login";
+	}
+	
+	@RequestMapping(value= {"/login/cadastro"})
+	public String cadastrar(ModelMap model) {
+		model.addAttribute("niveis", Nivel.values());
+		return "cadastro/incluirUsuario";
+	}
+	
+	@RequestMapping(value= {"/loginusuario"}, method=RequestMethod.POST)
+	public String Logar(Usuario usuario, ModelMap model) {
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("beanJdbc.xml");
+		JdbcUsuarioDao dao = (JdbcUsuarioDao) ctx.getBean("jdbcUsuarioDao");
+		try {
+			Usuario buscado = dao.buscarUsuario(usuario.getNome());
+			if (buscado == null) {
+				model.addAttribute("mensagem", "Usuario não cadastrado");
+				return "paginas/login";
+			}else if ((buscado.getSenha() == Md5.gerarMD5(usuario.getSenha())) && (buscado.getNome() == usuario.getNome())){
+				model.addAttribute("mensagem", "Usuario logado");
+				return "paginas/menu";
+			}else {
+				model.addAttribute("mensagem", "Senha incorreta");
+				return "paginas/login";
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			model.addAttribute("mensagem", "Erro : " + e.getMessage());
+			return "paginas/erro"; 
+		}
+	}
+	
+	@RequestMapping(value= {"/cadusuario"}, method=RequestMethod.POST)
+	public String cadastrar(Usuario usuario, ModelMap model) {
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("beanJdbc.xml");
+		JdbcUsuarioDao dao = (JdbcUsuarioDao) ctx.getBean("jdbcUsuarioDao");
+		try {
+		usuario.setSenha(Md5.gerarMD5(usuario.getSenha()));
+		dao.incluirUsuario(usuario);
+		model.addAttribute("mensagem", "Usuario : " + usuario.getNome() + " adicionado com sucesso ");
+		
+		model.addAttribute("niveis", Nivel.values());
+		return "cadastro/incluirUsuario";
+		}catch (Exception e) {
+			model.addAttribute("mensagem", "Erro : " + e.getMessage());
+			return "paginas/erro"; 
+		}
+	}
+	
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastro de usuarios</title>
+</head>
+<body>
+	
+	<h1>Login</h1>
+	<form action=<c:url value="/cadusuario"/>>
+		<label>Nome</label><br/>
+		<input type="text" name="nome"><br/>
+		<label>Senha</label><br/>
+		<input type="text" name="senha"><br/>
+		<label>Nivel</label><br/>
+		<select name="nivel">
+			<option value="1">Comum</option>
+			<option value="2">Admin</option>
+			<option value="3">Master</option>
+		</select>
+		<input type="submit" value="cadastrar"><br/>
+	</form>
+
+</body>
+</html>

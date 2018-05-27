@@ -1,0 +1,9 @@
+package br.com.seniorsolution.decorator;
+
+public class EmissorDecoratorCripto extends EmissorDecorator {
+
+	public EmissorDecoratorCripto(Emissor emissor) {
+		super(emissor);
+		// TODO Auto-generated constructor stub
+	}
+}

@@ -1,0 +1,11 @@
+$(document).ready(function(){
+	let lista = [
+		"Administração",
+		"JAVA",
+		"PHP",
+		"NODE"
+	]
+	for (let i = 0; i < lista.length; i++) {
+		$("#lista").append(`<option value=${i}>${lista[i]}<option>`)
+	}
+})

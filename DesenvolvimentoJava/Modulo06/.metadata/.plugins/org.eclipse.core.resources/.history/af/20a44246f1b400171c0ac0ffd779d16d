@@ -1,0 +1,21 @@
+$(document).ready(function(){
+	let lista = [
+		"Administração",
+		"JAVA",
+		"PHP",
+		"NODE"
+	]
+	for (let i = 0; i < lista.length; i++) {
+		$("#lista").append(`<option value=${i}>${lista[i]}</option>`)
+	}
+	//lista.forEach(function(element, index, array){})
+	
+	$("btn_enviar").on('click', function(){
+		let nome = $('#nome').val
+		let idade = $('#idade').val
+		let curso = $('#lista').val
+		let resultado = `Nome: ${nome}, Idade: ${idade}, Curso: ${curso}`
+
+		$('#resultado').html(resultado)
+	})
+})

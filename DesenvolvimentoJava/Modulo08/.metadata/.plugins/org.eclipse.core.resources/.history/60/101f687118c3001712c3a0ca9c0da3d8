@@ -1,0 +1,10 @@
+package br.com.seniorsolution.builder;
+
+public class GeradorBoleto {
+
+	private BoletoBuilder boletoBuilder;
+	
+	public GeradorBoleto(BoletoBuilder boletoBuilder) {
+		this.boletoBuilder = boletoBuilder;
+	}
+}

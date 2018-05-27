@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Pagina de erro</title>
+</head>
+<body>
+	<h1>Ops voce fez alguma coisa que ocasionou em um erro </h1>
+	
+	<h:link value="Retornar para login" outcome="login"></h:link>
+</body>
+</html>

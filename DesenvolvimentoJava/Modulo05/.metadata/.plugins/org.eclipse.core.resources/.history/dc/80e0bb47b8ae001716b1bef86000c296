@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Cadastro de Revisao</title>
+</h:head>
+<h:body>
+	<ui:composition template="layout.xhtml">
+		<ui:define name="conteudo">
+			<h1>Cadastro de revisões em livros</h1>
+			<h:form>
+				<h:selectOneMenu value="#{bRevisao.codLivro}">
+					<f:selectItem itemValue="" itemLabel="Selecione um livro" />
+					<f:selectItems value="#{bRevisao.listaLivros}" var="livro" itemLabel="#{livro.titulo}" itemValue="#{livro.codigo}"  />
+				</h:selectOneMenu>
+				<br/>
+				<h:outputText value="Responsavel" />
+				<br />
+				<h:inputText value="#{bRevisao.revisao.responsavel}" />
+				<br />
+				<h:outputText value="Data" />
+				<br />
+				<h:inputText value="#{bRevisao.revisao.data}">
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+				</h:inputText>
+				<br />
+				<h:outputText value="Descricao" />
+				<br />
+				<h:inputText value="#{bRevisao.revisao.descricao}" />
+				<br />
+				<h:commandButton value="Incluir" action="#{bRevisao.incluirRevisao()}" />
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

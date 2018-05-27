@@ -1,0 +1,7 @@
+$(document).ready(function(){
+	let nome = $("#nome").val()
+	let email = $("#email").val()
+	let assunto = $("#assunto").val()
+	let comentario = $("#comentario").val()
+	let btnEnviar = $("#enviar")
+})

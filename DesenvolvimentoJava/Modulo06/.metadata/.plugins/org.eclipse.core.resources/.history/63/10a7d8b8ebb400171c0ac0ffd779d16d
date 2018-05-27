@@ -1,0 +1,10 @@
+$(document).ready(function(){
+	$("#button").click(function(){
+		let nome = $("#nome").val();
+		let idade = $("#idade").val();
+		let result =  `Dados cadastrais : nome : ${nome}, idade : ${idade}`
+		if(idade < 18) result += "<br/> Voce e menor de idade"
+		else result += "<br/> Voce e maior de idade"
+		$("#mensagem").html(result)
+	})
+})

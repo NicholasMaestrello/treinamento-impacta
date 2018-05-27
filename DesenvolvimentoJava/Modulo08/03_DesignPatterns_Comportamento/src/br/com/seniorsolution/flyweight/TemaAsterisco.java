@@ -1,0 +1,14 @@
+package br.com.seniorsolution.flyweight;
+
+import java.util.Arrays;
+
+public class TemaAsterisco implements TemaFlyWeight {
+	@Override
+	public void imprimir(String titulo, String texto) {
+		// TODO Auto-generated method stub
+		System.out.println("*********" + titulo + "*********");
+		System.out.println(texto);
+		char [] rodape = new char[22 + titulo.length()];
+		Arrays.fill(rodape, '*');
+	}
+}

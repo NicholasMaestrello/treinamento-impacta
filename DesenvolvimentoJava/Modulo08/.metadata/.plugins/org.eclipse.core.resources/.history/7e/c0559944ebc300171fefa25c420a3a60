@@ -1,0 +1,14 @@
+package br.com.seniorsolution.flyweight;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class TemaFlyWeightFactory {
+	
+	private static Map<Class<? extends TemaFlyWeight>, TemaFlyWeight> temas =
+			new HashMap<>();
+	
+	public static final Class<TemaAsterisco> ASTERISCO = TemaAsterisco.class;
+	public static final Class<TemaHifen> HIFEN= TemaHifen.class;
+	
+}

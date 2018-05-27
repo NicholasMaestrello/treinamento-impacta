@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Menu de opções</title>
+</head>
+<body>
+	<h1>Menu de opções</h1>
+
+	<ul>
+		<li><a href="cadClientes.jsp"> Cadastro de clientes</a></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,13 @@
+127.0.0.1 - - [18/Oct/2017:13:21:23 -0200] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [18/Oct/2017:13:21:27 -0200] "GET /01_LivrariaWeb/admin/cadLivros.faces HTTP/1.1" 200 11374
+0:0:0:0:0:0:0:1 - - [18/Oct/2017:13:21:27 -0200] "GET /01_LivrariaWeb/javax.faces.resource/estilos.css.faces;jsessionid=D7A5A1415A7378F810429CF9DC52E224?ln=css HTTP/1.1" 200 1178
+0:0:0:0:0:0:0:1 - - [18/Oct/2017:13:21:27 -0200] "GET /01_LivrariaWeb/javax.faces.resource/fileupload/fileupload.css.faces;jsessionid=D7A5A1415A7378F810429CF9DC52E224?ln=primefaces&v=6.1 HTTP/1.1" 200 2313
+0:0:0:0:0:0:0:1 - - [18/Oct/2017:13:21:27 -0200] "GET /01_LivrariaWeb/javax.faces.resource/core.js.faces;jsessionid=D7A5A1415A7378F810429CF9DC52E224?ln=primefaces&v=6.1 HTTP/1.1" 200 31198
+0:0:0:0:0:0:0:1 - - [18/Oct/2017:13:21:27 -0200] "GET /01_LivrariaWeb/javax.faces.resource/jquery/jquery.js.faces;jsessionid=D7A5A1415A7378F810429CF9DC52E224?ln=primefaces&v=6.1 HTTP/1.1" 200 107785
+0:0:0:0:0:0:0:1 - - [18/Oct/2017:13:21:27 -0200] "GET /01_LivrariaWeb/javax.faces.resource/fileupload/fileupload.js.faces;jsessionid=D7A5A1415A7378F810429CF9DC52E224?ln=primefaces&v=6.1 HTTP/1.1" 200 32785
+0:0:0:0:0:0:0:1 - - [18/Oct/2017:13:21:27 -0200] "GET /01_LivrariaWeb/javax.faces.resource/jquery/jquery-plugins.js.faces;jsessionid=D7A5A1415A7378F810429CF9DC52E224?ln=primefaces&v=6.1 HTTP/1.1" 200 248533
+0:0:0:0:0:0:0:1 - - [18/Oct/2017:13:21:27 -0200] "GET /01_LivrariaWeb/javax.faces.resource/components.js.faces;jsessionid=D7A5A1415A7378F810429CF9DC52E224?ln=primefaces&v=6.1 HTTP/1.1" 200 380560
+0:0:0:0:0:0:0:1 - - [18/Oct/2017:13:21:27 -0200] "GET /01_LivrariaWeb/javax.faces.resource/components.css.faces;jsessionid=D7A5A1415A7378F810429CF9DC52E224?ln=primefaces&v=6.1 HTTP/1.1" 200 78618
+0:0:0:0:0:0:0:1 - - [18/Oct/2017:13:21:27 -0200] "GET /favicon.ico HTTP/1.1" 404 1081
+0:0:0:0:0:0:0:1 - - [18/Oct/2017:13:22:50 -0200] "POST /01_LivrariaWeb/admin/cadLivros.faces;jsessionid=D7A5A1415A7378F810429CF9DC52E224 HTTP/1.1" 200 11410
+0:0:0:0:0:0:0:1 - - [18/Oct/2017:13:22:50 -0200] "GET /01_LivrariaWeb/javax.faces.resource/images/ui-icons_2e83ff_256x240.png.faces?ln=primefaces-aristo HTTP/1.1" 200 4369

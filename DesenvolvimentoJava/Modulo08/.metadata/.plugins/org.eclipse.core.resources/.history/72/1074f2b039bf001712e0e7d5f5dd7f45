@@ -1,0 +1,8 @@
+package br.com.seniorsolution.singleton;
+
+public class AppGenericDao {
+
+	public static void main(String[] args) {
+		GenericDao dao = RepositorioSingleton.getInstance();
+	}
+}

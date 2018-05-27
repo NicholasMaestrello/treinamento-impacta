@@ -1,0 +1,11 @@
+127.0.0.1 - - [06/Oct/2017:16:36:30 -0300] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [06/Oct/2017:16:36:31 -0300] "GET /01_LivrariaWeb/cadLivros.faces HTTP/1.1" 200 966
+0:0:0:0:0:0:0:1 - - [06/Oct/2017:16:37:09 -0300] "POST /01_LivrariaWeb/cadLivros.faces;jsessionid=71DEAB5AA5ED996E87410779259EA6AD HTTP/1.1" 500 5494
+127.0.0.1 - - [06/Oct/2017:16:43:03 -0300] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [06/Oct/2017:16:43:03 -0300] "GET /01_LivrariaWeb/WEB-INF/classes/br/com/seniorsolution/utils/JpaUtil.java HTTP/1.1" 404 1047
+127.0.0.1 - - [06/Oct/2017:16:43:40 -0300] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [06/Oct/2017:16:43:40 -0300] "GET /01_LivrariaWeb/cadLivros.faces HTTP/1.1" 200 923
+0:0:0:0:0:0:0:1 - - [06/Oct/2017:16:44:00 -0300] "POST /01_LivrariaWeb/cadLivros.faces HTTP/1.1" 200 1001
+127.0.0.1 - - [06/Oct/2017:16:45:58 -0300] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [06/Oct/2017:16:45:59 -0300] "GET /01_LivrariaWeb/cadLivros.faces HTTP/1.1" 200 922
+0:0:0:0:0:0:0:1 - - [06/Oct/2017:16:46:31 -0300] "POST /01_LivrariaWeb/cadLivros.faces HTTP/1.1" 200 155

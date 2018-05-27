@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTf-8">
+<title>Cadastro de pedidos</title>
+</head>
+<body>
+	<h1>Cadastro de pedidos</h1>
+	<form action="clientes" method="post">
+	
+		<input type="submit" value="Enviar"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+package br.com.seniorsolution.helper;
+
+import javax.persistence.EntityManager;
+
+public class ForumHelper {
+	private EntityManager em;
+	
+	public ForumHelper(EntityManager em) {
+		this.em = em;
+	}
+}

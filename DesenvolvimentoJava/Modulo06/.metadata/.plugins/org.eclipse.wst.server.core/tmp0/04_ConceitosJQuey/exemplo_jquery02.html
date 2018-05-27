@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Insert title here</title>
+	<style type="text/css">
+		.ok{
+			border: 1px solid green;
+			background-color: lightgreen;
+			color: green;
+			padding: 20px;
+			width: 100px;
+		}
+		.erro{
+			border: 1px solid red;
+			background-color: lightcoral;
+			color: red;
+			padding: 20px;
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Dados do aluno</h1>
+	<label>Nome : </label> <br/>
+	<input type="text" id="nome" size="20" /><br/>
+	<label>Idade</label><br/>
+	<input type="number" id="idade" size="3"><br/>
+	<label>Curso:</label><br/>
+	<select id="lista"></select><br/>
+	<input type="button" id="btn_enviar" value="Enviar"/><br/>
+	<div id="resposta"></div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="exemplo_jquery02.js" type="text/javascript"></script>
+</body>
+</html>

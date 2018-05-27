@@ -1,0 +1,25 @@
+package br.com.seniorsolution.decorator;
+
+import java.io.ByteArrayOutputStream;
+import java.util.zip.Deflater;
+import java.util.zip.DeflaterOutputStream;
+
+public class EmissorDecoratorCompress extends EmissorDecorator {
+
+	public EmissorDecoratorCompress(Emissor emissor) {
+		super(emissor);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void enviar(String mensagem) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private String compactar(String mensgagem) {
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		DeflaterOutputStream dout = new DeflaterOutputStream(out, new Deflater());
+		dout.write(mensagem);
+	}
+}

@@ -1,0 +1,12 @@
+* {
+	font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+body{
+	background-color: rgb(235, 235, 316);
+}
+
+.container{
+	margin: 80px 50px 50px 50px;
+	
+}

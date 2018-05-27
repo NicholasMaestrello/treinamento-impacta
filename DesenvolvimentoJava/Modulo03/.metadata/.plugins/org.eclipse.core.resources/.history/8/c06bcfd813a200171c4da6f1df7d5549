@@ -1,0 +1,35 @@
+package br.com.seniorsolution.aplicacao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.swing.JOptionPane;
+
+import br.com.seniorsolution.entidade.Forum;
+import br.com.seniorsolution.entidade.Usuario;
+import br.com.seniorsolution.helper.ForumHelper;
+
+public class AppForum {
+	public static void main(String[] args) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpaForum");
+		
+		EntityManager em = emf.createEntityManager();
+		
+		try {
+			Forum forum = new Forum();
+			ForumHelper dao = new ForumHelper(em);
+			
+			forum.setAssunto("Projeto JPA");
+			forum.setDescricao("Exemplo de JPA com Maven");
+			dao.salvar(forum);
+			
+			System.out.println("ok");
+			JOptionPane.showMessageDialog(null, "Forum incluido com sucesso !");
+			
+			Usuario usuario = new Usuario();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.tabela{
+	border: 1px solid lightgray;
+	
+}
+
+.cabecalho{
+	text-align: center;
+	font: 12px Verdana;
+	font-weight: bold;
+	background: rgb(128, 128, 255);
+}
+
+.col1{
+	text-align: center;
+	font: 12px Arial, sans-serif;
+	background: rgb(187, 187, 187);
+}
+
+.col2{
+	text-align: center;
+	font: 12px Arial, sans-serif;
+	background: rgb(213, 213, 170);
+}
+
+.col3{
+	text-align: center;
+	font: 12px Arial, sans-serif;
+	background: rgb(222, 188, 188);
+}
+
+.col4{
+	text-align: center;
+	font: 12px Arial, sans-serif;
+	background: rgb(255, 203, 151);
+}

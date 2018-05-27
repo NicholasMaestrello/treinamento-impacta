@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gestão de produtos</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top"
+		style="background-color: lightyellow;">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Logo</a>
+			</div>
+
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="./cadastroprodutos">Cad produtos</a></li>
+					<li><a href="./buscarprodutos">Buscar</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br/>
+	<form action="ProdutosServlet" action="POST">
+		<label>Codigo</label>
+		<input type="text" name="codigo"/><br/>
+		<label>Descricao</label>
+		<input type="text" name="descricao"/><br/>
+		<label>Preço</label>
+		<input type="text" name="preco"/><br/>
+		<label>Fabricante</label>
+		<input type="text" name="fabricante"/><br/>
+		<input type="submit" value="Enviar"/>
+	</form>
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

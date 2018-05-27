@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Aplciação rodando com spring</title>
+</head>
+<body>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	<h1>Aplciação rodando com spring</h1>
+	<ul>
+		<li><a href=<c:url value="/escola/cadastro"/>>Cadastro de escolas</a></li>
+		<li><a href=<c:url value="/curso/cadastro"/>>Cadastro de cursos</a></li>
+		<li><a href=<c:url value="/disciplina/cadastro"/>>Cadastro de Disciplinas</a></li>
+		<li><a>Consulta de Curso</a></li>
+		<li><a>Consulta de Disciplina</a></li>
+		<li><a>Consulta de Escola</a></li>
+	</ul>
+	${mensagem }
+</body>
+</html>

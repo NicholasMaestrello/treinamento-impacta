@@ -1,0 +1,24 @@
+package br.com.seniorsolution.utils;
+
+import javax.faces.context.FacesContext;
+import javax.faces.event.AbortProcessingException;
+import javax.faces.event.ValueChangeEvent;
+import javax.faces.event.ValueChangeListener;
+
+import br.com.seniorsolution.bean.RevisaoBean;
+import br.com.seniorsolution.dao.GenericDao;
+import br.com.seniorsolution.entity.Revisao;
+
+public class RevisaoChangeListner implements ValueChangeListener {
+
+	@Override
+	public void processValueChange(ValueChangeEvent event) throws AbortProcessingException {
+		RevisaoBean revisaoBean = (RevisaoBean) FacesContext.getCurrentInstance()
+				.getExternalContext().getRequestMap().get("bRevisao");
+		GenericDao<Revisao> dao = new GenericDao<Revisao>(Revisao.class);
+		revisaoBean.setRevisoes(dao.listarRevisoes(Integer.parseInt(event.getNewValue().toString())));
+		
+		
+	}
+
+}

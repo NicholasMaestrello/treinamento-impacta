@@ -1,0 +1,25 @@
+// definindo variaveis
+
+function exibir(){
+	let nome = document.getElementById("nome");
+	let idade = document.getElementById("idade"); 
+
+	let mensagem = `nome : ${nome}, idade : ${idade}`;
+	
+	alert(mensagem)
+}
+
+//let nome = document.getElementById("nome");
+//let idade = document.getElementById("idade"); 
+//
+//let button = document.getElementById("button");
+
+//button.addEventListener("click", displayDate);
+//function displayDate(){
+//	let mensagem = `Nome : ${nome.value} idade : ${idade.value}`;
+//	alert(mensagem);
+//}
+
+
+
+

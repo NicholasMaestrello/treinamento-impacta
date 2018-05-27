@@ -1,0 +1,20 @@
+package br.com.seniorsolution.bridge;
+
+import java.io.FileWriter;
+
+public class GeradorArquivosTxt implements GeradorArquivos {
+
+	@Override
+	public void gerar(String conteudo) {
+		// TODO Auto-generated method stub
+		try {
+			FileWriter writer = new FileWriter("C:/Desenvolvimento_Java/Modulo08/recibo.txt");
+			writer.write(conteudo/
+			writer.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+
+}

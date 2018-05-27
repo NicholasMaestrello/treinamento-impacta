@@ -1,0 +1,9 @@
+package br.com.seniorsolution.decorator;
+
+public class EmissorDecorator implements Emissor {
+
+	@Override
+	public void enviar(String mensagem) {
+	}
+
+}

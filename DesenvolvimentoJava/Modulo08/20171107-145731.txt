@@ -1,0 +1,4 @@
+Recibo: 
+Emissor :Impacta
+Cliente: Senior
+Valor: 100.0

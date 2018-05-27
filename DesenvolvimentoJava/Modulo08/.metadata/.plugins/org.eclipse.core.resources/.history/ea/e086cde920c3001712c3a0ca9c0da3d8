@@ -1,0 +1,15 @@
+package br.com.seniorsolution.multiton;
+
+import java.awt.Color;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Tema {
+
+	private String nome;
+	private Color corFundo;
+	private Color corFonte;
+	
+	private static Map<String, Tema> temas = new HashMap<>();
+	
+}

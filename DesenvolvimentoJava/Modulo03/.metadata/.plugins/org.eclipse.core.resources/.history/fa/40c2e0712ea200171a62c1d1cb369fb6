@@ -1,0 +1,56 @@
+package br.com.seniorsolution.entidades;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="pedido")
+public class Pedido implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+
+	private PedidoPK pedidoPK;
+	
+	private Date dataPedido;
+	
+	private Cliente cliente;
+	
+	private Set<Item> itens = new LinkedHashSet<>();
+
+	public PedidoPK getPedidoPK() {
+		return pedidoPK;
+	}
+
+	public void setPedidoPK(PedidoPK pedidoPK) {
+		this.pedidoPK = pedidoPK;
+	}
+
+	public Date getDataPedido() {
+		return dataPedido;
+	}
+
+	public void setDataPedido(Date dataPedido) {
+		this.dataPedido = dataPedido;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public Set<Item> getItens() {
+		return itens;
+	}
+
+	public void setItens(Set<Item> itens) {
+		this.itens = itens;
+	}
+}

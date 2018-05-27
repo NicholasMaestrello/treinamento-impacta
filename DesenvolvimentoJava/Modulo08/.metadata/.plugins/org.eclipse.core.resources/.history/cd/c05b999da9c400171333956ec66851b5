@@ -1,0 +1,32 @@
+package br.com.seniorsolution.executaveis;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.seniorsolution.entity.Aluno;
+import br.com.seniorsolution.entity.Curso;
+import br.com.seniorsolution.entity.Disciplina;
+
+public class Executavel1 {
+
+	public static void main(String[] args) {
+		List<Disciplina> disciplinasADS = new ArrayList<>();
+		disciplinasADS.add(new Disciplina("ED", 300.00));
+		disciplinasADS.add(new Disciplina("BD", 120.00));
+		disciplinasADS.add(new Disciplina("SO", 80.00));
+		
+		System.out.println(disciplinasADS.get(0).getNome());
+		
+		Curso ads = new Curso("ADS", disciplinasADS);
+		
+		Aluno aluno = new Aluno();
+		aluno.setNome("João");
+		aluno.setRa("123456");
+		aluno.setCurso(ads);
+		aluno.matricular(aluno.getCurso().getDisciplinas());
+		
+		System.out.println(aluno.getMatriculas().get(0).getNome());
+		
+		
+	}
+}

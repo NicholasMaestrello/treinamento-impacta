@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Indices</title>
+<style type="text/css">
+	body{
+		background-color: lightyellow;
+	}
+	
+	.margem{
+		margin-left: 20px;
+		margin-right: 20px;
+		padding: 25px;
+	}
+	
+	.titulo{
+		font-family: Verdana, Tahoma;
+		font-size: 30px;
+		background-color: #00FFFF;
+	}
+	.conteudo{
+		border: 1px solid #884513;
+		color: blue;
+		border-radius: 5px;
+	}
+</style>
+</head>
+<body>
+	<p>Introdução ao html 5</p>
+	<div class="titulo">
+		<p>Topicos estudados</p>
+	</div>
+	<div class="conteudo">
+		<div>
+			HTML5
+		</div>
+		<div>
+			<ul>
+				<li>Elementos do html5</li>
+				<li>Formularios</li>
+				<li>Responsividade</li>
+				<li>Bootstrap</li>
+			</ul>
+		</div>
+		<div>
+			Elaborado pela turma de desenvolvimento JAVA
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Indexed DB</title>
+</head>
+<body>
+	<form>
+		<div id="mensagemdb"></div>
+		<div>
+			<label>Nome: </label><br/>
+			<input type="text" id="nome" name="nome" /><br/>
+		</div>
+		<div>
+			<label>Telefone </label><br/>
+			<input type="tel" id="telefone" name="telefone" /><br/>
+		</div>
+		
+		<input type="button" id="btnEnviar" value="Enviar" />
+		<hr/>
+		<h2>Listagem de Pessoas</h2>
+		<input type="button" id="btnListar" value="Listar" />
+		<br/>
+		
+		<div>
+			<ul id="listaPessoas"></ul>
+		</div>
+	</form>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		let request, db;
+		// abrindo ou cirando o banco de dados
+		
+		request = window.indexedDb.open("DBPessoas");
+		
+		// eventos usados ao abrir o banco de dadeos
+		
+		request.onerror = function(event) {
+			$("#mensagemdb").html("Erro ao abrir o banco de dados");
+		}
+		
+		request.onsuccess = function(event) {
+			$("#mensagemdb").html("Banco de dados aberto com sucesso");
+			db = event.target.result;
+		}
+		
+		request.onupgradeneeded = function(event){
+			$("#mensagemdb").html("Banco de dados preparado");
+			db = event.target.result;
+			
+			let objectStore = db.createObjectStore("pessoas", 
+					{keyPath: "nome"})
+		}
+		
+		// evento para incluir um novo registro
+		$("#btnEnviar").click(function(){
+			let vnome = $("#nome").val();
+			let vtelefone = $("#telefone").val();
+			
+			let transaction = db.transaction([], "")
+		})
+	</script>
+</body>
+</html>

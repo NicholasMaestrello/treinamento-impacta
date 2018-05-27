@@ -1,0 +1,63 @@
+package br.com.seniorsolution.prototype;
+
+import java.util.Calendar;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Anuncio implements Prototype<Anuncio> {
+
+	private String nome;
+	private Calendar data;
+	private Set<String> palavrasChave;
+	
+	public Anuncio(String nome, Calendar data, Set<String> palavrasChave) {
+		this.nome = nome;
+		this.data = data;
+		this.palavrasChave = palavrasChave;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+
+	public Calendar getData() {
+		return data;
+	}
+
+
+
+	public void setData(Calendar data) {
+		this.data = data;
+	}
+
+
+
+	public Set<String> getPalavrasChave() {
+		return palavrasChave;
+	}
+
+
+
+	public void setPalavrasChave(Set<String> palavrasChave) {
+		this.palavrasChave = palavrasChave;
+	}
+
+
+
+	@Override
+	public Anuncio clone() {
+		String nome = "Cópia do anuncio : " + this.getNome();
+		Calendar data = (Calendar)this.getData().clone();
+		Set<String> palavras = new HashSet<>(this.getPalavrasChave());
+		
+		return new Anuncio(nome, data, palavras);
+	}
+}

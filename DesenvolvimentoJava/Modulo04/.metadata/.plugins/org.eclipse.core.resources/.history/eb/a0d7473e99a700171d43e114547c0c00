@@ -1,0 +1,20 @@
+package br.com.seniorsolution.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import br.com.seniorsolution.entidades.Escola;
+
+@Controller
+public class EscolaController {
+
+	@RequestMapping(value= {"/escola/cadastro"})
+	public String incluir() {
+		return "cadastro/incluirEscola";
+	}
+	
+	@RequestMapping(value="cadescola")
+	public String incluir(Escola escola) {
+		return "cadastro/incluirEscola";
+	}
+}

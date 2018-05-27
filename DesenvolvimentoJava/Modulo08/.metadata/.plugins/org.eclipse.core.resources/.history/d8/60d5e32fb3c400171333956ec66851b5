@@ -1,0 +1,12 @@
+package br.com.seniorsolution.factory;
+
+public class EmissorBoleto implements Emissor {
+
+	@Override
+	public void emitir(String mensagem) {
+		// TODO Auto-generated method stub
+		System.out.println("Pagamento realizado com boleto");
+		System.out.println();
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.br.sennior.dao;
+
+import java.util.List;
+
+public interface GenericDao {
+	void adicionar(T entidade);
+	List<T> listar();
+	T buscar(int id);
+}

@@ -1,0 +1,42 @@
+package br.com.seniorsolution.entity;
+
+import java.util.Set;
+
+public class Aluno {
+
+	private String nome;
+	private String ra;
+	private Curso curso;
+	private Set<Disciplina> matriculas;
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getRa() {
+		return ra;
+	}
+	public void setRa(String ra) {
+		this.ra = ra;
+	}
+	public Curso getCurso() {
+		return curso;
+	}
+	public void setCurso(Curso curso) {
+		this.curso = curso;
+	}
+	public Set<Disciplina> getMatriculas() {
+		return matriculas;
+	}
+	public void setMatriculas(Set<Disciplina> matriculas) {
+		this.matriculas = matriculas;
+	}
+	
+	public void Matricular(Disciplina disciplina) {
+		this.matriculas.add(disciplina);
+	}
+	
+	
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastro de item</title>
+</head>
+<body>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+	<jsp:useBean id="pedidoBean" class="br.com.seniorsolution.beans.BeanVendas"></jsp:useBean>
+
+	<h1>Inclusão de Itens ao pedido</h1>
+	
+	<form action="item" method="post">
+		<label for="pedido">Pedido:</label><br/>
+		<select name="pedido">
+			<c:forEach var="item" items="${pedidoBean.listaPedidos}">
+				<option value="${item.pedidoPK}">${item.pedidoPK}</option>
+			</c:forEach>
+		</select><br/>
+		<label for="quantidade">Quantidade</label><br>
+		<input type="text" name="quantidade" id="quantidade" size="5"><br>
+		
+		<label for="descricao">Descricao: </label><br>
+		<input type="text" name="descricao" id="descricao" size="30"><br>
+		
+		<input type="submit" value="Enviar">
+		${mensagem}
+	</form>
+</body>
+</html>

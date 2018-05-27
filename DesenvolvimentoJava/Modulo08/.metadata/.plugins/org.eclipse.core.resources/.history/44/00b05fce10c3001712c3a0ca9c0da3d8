@@ -1,0 +1,11 @@
+package br.com.seniorsolution.abstractfactory;
+
+public class VisaComunicacaoFactory {
+
+	private EmissorCreator  emissorCreator = new EmissorCreator();
+	private ReceptorCreator receptorCreator = new ReceptorCreator();
+	
+	public Emissor createEmissor() {
+		return emissorCreator.create(TipoEmissor.VISA);
+	}
+}

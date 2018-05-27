@@ -1,0 +1,30 @@
+package br.com.seniorsolution.entidades;
+
+import br.com.seniorsolution.utils.Nivel;
+
+public class Usuario {
+
+	private String nome;
+	private String senha;
+	private Nivel nivel;
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	public Nivel getNivel() {
+		return nivel;
+	}
+	public void setNivel(Nivel nivel) {
+		this.nivel = nivel;
+	}
+	
+	
+}

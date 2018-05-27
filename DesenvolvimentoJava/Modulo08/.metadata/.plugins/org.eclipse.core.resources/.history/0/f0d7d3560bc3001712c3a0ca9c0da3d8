@@ -1,0 +1,15 @@
+package br.com.seniorsolution.factory;
+
+public class TesteEmissores {
+	public static void main(String[] args) {
+		
+		Emissor em1 = new EmissorSMS();
+		Emissor em2  = new EmissorEmail();
+		Emissor em3 = new EmissorMaquininha();
+		
+	}
+	
+	private static void imprimir(Emissor em, String mensagem) {
+		em.enviar(mensagem);
+	}
+}

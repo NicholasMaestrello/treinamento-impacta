@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Cadastro de Revisao</title>
+</h:head>
+<h:body>
+	<ui:composition template="layout.xhtml">
+		<ui:define name="conteudo">
+			<h1>Cadastro de revisões em livros</h1>
+			<h:form>
+				<h:selectOneMenu id="empresa" value="#{bRevisao.revisao}"
+					converter="simpleEntityConverter" required="true"
+					requiredMessage="Valor é obrigatório">
+					<f:selectItem itemValue="" itemLabel="Selecione uma empresa" />
+					<t:selectItems value="#{bRevisao.listaLivros}" var="livro" itemLabel="#{livro.titulo}" itemValue="#{livro}" />
+				</h:selectOneMenu>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

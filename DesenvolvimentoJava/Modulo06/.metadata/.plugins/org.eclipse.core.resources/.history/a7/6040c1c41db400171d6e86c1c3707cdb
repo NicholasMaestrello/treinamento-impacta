@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Exemplo da propriedade Display</title>
+<style type="text/css">
+	.exemplo{
+		color: #FFF;
+		
+	}
+</style>
+</head>
+<body>
+
+</body>
+</html>

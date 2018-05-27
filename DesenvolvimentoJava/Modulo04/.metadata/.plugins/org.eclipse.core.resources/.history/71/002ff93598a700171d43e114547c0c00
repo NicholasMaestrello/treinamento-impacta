@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastro de Escola</title>
+</head>
+<body>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	<h1>Inclusão de uma nova escola</h1>
+	<form action=<c:url value="/cadescola"/>  method="POST">
+		<label>Nome da escola :</label><br/>
+		<input type="text" name="" size="30" />
+	</form>
+</body>
+</html>

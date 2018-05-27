@@ -1,0 +1,9 @@
+package br.com.seniorsolution.pog;
+
+public class ArtigoAluno {
+
+	private String titulo;
+	private int paginas;
+	private String conteudo;
+	private Aluno autor;
+}

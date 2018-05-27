@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Exemplo float</title>
+
+<style type="text/css">
+	.borda{
+		border: 1px solid blue;
+		width: 150px;
+		height: 150px;
+	}
+</style>
+
+</head>
+<body>
+	<div class="borda"></div>
+</body>
+</html>

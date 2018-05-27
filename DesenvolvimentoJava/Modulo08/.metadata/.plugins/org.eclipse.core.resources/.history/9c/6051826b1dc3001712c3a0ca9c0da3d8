@@ -1,0 +1,6 @@
+package br.com.seniorsolution.prototype;
+
+public class Anuncio implements Prototype<Anuncio> {
+
+	
+}

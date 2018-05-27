@@ -1,0 +1,43 @@
+package br.com.seniorsolution.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Aluno {
+
+	private String nome;
+	private String ra;
+	private Curso curso;
+	private List<Disciplina> matriculas = new ArrayList<>();
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getRa() {
+		return ra;
+	}
+	public void setRa(String ra) {
+		this.ra = ra;
+	}
+	public Curso getCurso() {
+		return curso;
+	}
+	public void setCurso(Curso curso) {
+		this.curso = curso;
+	}
+	public List<Disciplina> getMatriculas() {
+		return matriculas;
+	}
+	public void setMatriculas(List<Disciplina> matriculas) {
+		this.matriculas = matriculas;
+	}
+	
+	public void matricular(Disciplina disciplina) {
+		this.matriculas.add(disciplina);
+	}
+	
+	
+}

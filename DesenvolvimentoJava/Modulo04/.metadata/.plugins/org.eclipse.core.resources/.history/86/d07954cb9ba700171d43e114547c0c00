@@ -1,0 +1,31 @@
+package br.com.seniorsolution.controllers;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import br.com.seniorsolution.entidades.Escola;
+import br.com.seniorsolution.jdbc.JdbcEscolaDao;
+
+@Controller
+public class EscolaController {
+
+	@RequestMapping(value={"/escola/cadastro"})
+	public String incluir() {
+		return "cadastro/incluirEscola";
+	}
+	
+	@RequestMapping(value={"/cadescola"}, method=RequestMethod.POST)
+	public String incluir(Escola escola) {
+		try {
+			ApplicationContext ctx = new ClassPathXmlApplicationContext("beanJdbc.xml");
+			JdbcEscolaDao dao = (JdbcEscolaDao) ctx.getBean("jdbcEscolaDao");
+			dao.incluirEscola(escola);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return "cadastro/incluirEscola";
+	}
+}

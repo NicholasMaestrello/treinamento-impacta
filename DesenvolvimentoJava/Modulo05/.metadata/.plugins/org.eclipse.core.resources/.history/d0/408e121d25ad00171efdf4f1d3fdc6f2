@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Login de Usuario</title>
+	<h:outputStylesheet library="css" name="estilos.css" />
+</h:head>
+<h:body>
+	<h1>Insira seus dados abaixo para efetivar o login</h1>
+	<h:form>
+		<h:outputText value="Nome" /><br/>
+		<h:inputText value="#{bLivro.livro.dataPublicacao}" >
+			<f:convertDateTime pattern="dd/MM/yyyy" />
+		</h:inputText><br/>
+		
+		<h:outputText value="Senha" /><br/>
+		<h:inputText value="#{bLivro.livro.preco}" /><br/>
+		
+		<h:outputText value="Nivel" /><br/>
+		<h:inputFile value="#{bLivro.part}" />
+		<br/>
+		
+		<h:commandButton value="Incluir" action="#{bLivro.incluirLivro()}" />
+	</h:form>
+</h:body>
+</html>

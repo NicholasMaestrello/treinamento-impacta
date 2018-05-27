@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Lista de Revisões</title>
+</h:head>
+<h:body>
+	<ui:composition template="layout.xhtml">
+		<ui:define name="conteudo">
+		<h1>Lista de Revisoes de cada livro</h1>
+		<h:link value="Voltar para menu" outcome="menu"></h:link>
+			<h:form>
+				<h:selectOneMenu value="#{bRevisao.codLivro}"
+					valueChangeListener="#{bRevisao.alterarRevisoes}" immediate="true"
+					onchange="submit()">
+					<f:selectItem itemValue="" itemLabel="Selecione um livro" />
+					<f:selectItems value="#{bRevisao.listaLivros}" var="livro"
+						itemLabel="#{livro.titulo}" itemValue="#{livro.codigo}" />
+				</h:selectOneMenu>
+				<br/>
+				<ui:repeat value="#{bRevisao.revisoes}" var="revisao">
+					#{revisao.descricao} <br />
+				</ui:repeat>
+				<h:dataTable  value="#{bRevisao.revisoes}" var="revisao" styleClass="tabela" headerClass="cabecalho"
+					columnClasses="col1, col2, col3, col4" >
+					<h:column>
+						<f:facet name="header">ID</f:facet>
+						<h:outputText value="#{revisao.id}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">DESCRICAO</f:facet>
+						<h:outputText value="#{revisao.descricao}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">RESPONSAVEL</f:facet>
+						<h:outputText value="#{revisao.responsavel}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">DATA</f:facet>
+						<h:outputText value="#{revisao.data}" >
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</h:column>
+					
+				</h:dataTable>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

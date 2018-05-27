@@ -1,0 +1,48 @@
+package br.com.seniorsolution.bean;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
+
+import br.com.seniorsolution.dao.GenericDao;
+import br.com.seniorsolution.entity.Livro;
+import br.com.seniorsolution.entity.Revisao;
+
+@ManagedBean(name="bRevisao")
+@SessionScoped
+public class RevisaoBean {
+
+	@ManagedProperty(value="#{beanRevisao}")
+	private Revisao revisao;
+	
+//	public RevisaoBean() {
+//		this.revisao = new Revisao();
+//	}
+
+	public Revisao getRevisao() {
+		return revisao;
+	}
+
+	public void setRevisao(Revisao revisao) {
+		this.revisao = revisao;
+	}
+	
+	public String incluirRevisao() {
+		System.out.println("Entrou no metodo");
+		try {
+			GenericDao<Revisao> dao = new GenericDao<Revisao>(Revisao.class);
+			dao.adicionar(this.revisao);
+			return "Sucesso";
+		} catch (Exception e) {
+			return "erro";
+		}
+	}
+	
+	public List<Livro> getListaLivros(){
+		GenericDao<Livro> dao = new GenericDao<Livro>(Livro.class);
+		return dao.listar();
+	}
+	
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Cadastro de Revisao</title>
+</h:head>
+<h:body>
+	<ui:composition template="layout.xhtml">
+		<ui:define name="conteudo">
+			<h1>Cadastro de revisões em livros</h1>
+			<h:link value="Voltar para menu" outcome="menu"></h:link>
+			<h:form>
+				<p:panelGrid>
+					<h:selectOneMenu value="#{bRevisao.codLivro}">
+						<f:selectItem itemValue="" itemLabel="Selecione um livro" />
+						<f:selectItems value="#{bRevisao.listaLivros}" var="livro"
+							itemLabel="#{livro.titulo}" itemValue="#{livro.codigo}" />
+					</h:selectOneMenu>
+					<br />
+					<p:outputLabel value="Responsavel" />
+					<br />
+					<p:inputText value="#{bRevisao.revisao.responsavel}" />
+					<br />
+					<p:outputLabel value="Data" />
+					<br />
+					<p:inputText value="#{bRevisao.revisao.data}">
+						<f:convertDateTime pattern="dd/MM/yyyy" />
+					</h:inputText>
+					<br />
+					<p:outputLabel value="Descricao" />
+					<br />
+					<p:inputText value="#{bRevisao.revisao.descricao}" />
+					<br />
+					<h:commandButton value="Incluir"
+						action="#{bRevisao.incluirRevisao()}" />
+				</p:panelGrid>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

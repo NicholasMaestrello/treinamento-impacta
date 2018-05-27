@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Cadastro de Livros</title>
+</h:head>
+<h:body>
+
+	<ui:composition template="layout.xhtml">
+		<ui:define name="conteudo">
+			<h:form enctype="multipart/form-data">
+				<p:panelGrid columns="2">
+					<f:facet name="header">
+						<h2>Cadastrar um novo livro</h2>
+					</f:facet>
+					<p value="Código" />
+					<br />
+					<h:inputText value="#{bLivro.livro.codigo}" />
+					<br />
+
+					<h:outputText value="Título" />
+					<br />
+					<h:inputText value="#{bLivro.livro.titulo}" />
+					<br />
+
+					<h:outputText value="Autor" />
+					<br />
+					<h:inputText value="#{bLivro.livro.autor}" />
+					<br />
+
+					<h:outputText value="Data de Publicacao" />
+					<br />
+					<h:inputText value="#{bLivro.livro.dataPublicacao}">
+						<f:convertDateTime pattern="dd/MM/yyyy" />
+					</h:inputText>
+					<br />
+
+					<h:outputText value="Preço" />
+					<br />
+					<h:inputText value="#{bLivro.livro.preco}" />
+					<br />
+
+					<h:outputText value="Figura" />
+					<br />
+					<h:inputFile value="#{bLivro.part}" />
+					<br />
+
+					<h:commandButton value="Incluir" action="#{bLivro.incluirLivro()}" />
+			</h:form>
+			<h:link value="Voltar para menu" outcome="menu"></h:link>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

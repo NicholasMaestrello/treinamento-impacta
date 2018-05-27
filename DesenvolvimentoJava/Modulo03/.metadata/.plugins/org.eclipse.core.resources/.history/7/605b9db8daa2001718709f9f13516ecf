@@ -1,0 +1,5 @@
+package br.com.seniorsolution.entidades;
+
+public class Item implements  {
+
+}

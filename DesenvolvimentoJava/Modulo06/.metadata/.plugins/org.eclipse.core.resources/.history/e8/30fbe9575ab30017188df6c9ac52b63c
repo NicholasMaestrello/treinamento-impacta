@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Indices</title>
+<style type="text/css">
+	body{
+		background-color: lightellow;
+	}
+</style>
+</head>
+<body>
+	<p>Introdução ao html 5</p>
+	<div>
+		<p>Topicos estudados</p>
+	</div>
+	<div>
+		<div>
+			HTML5
+		</div>
+		<div>
+			<ul>
+				<li>Elementos do html5</li>
+				<li>Formularios</li>
+				<li>Responsividade</li>
+				<li>Bootstrap</li>
+			</ul>
+		</div>
+		<div>
+			Elaborado pela turma de desenvolvimento JAVA
+		</div>
+	</div>
+</body>
+</html>

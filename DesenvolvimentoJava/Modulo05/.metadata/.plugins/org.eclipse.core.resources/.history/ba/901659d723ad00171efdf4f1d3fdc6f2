@@ -1,0 +1,29 @@
+package br.com.seniorsolution.bean;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+import br.com.seniorsolution.entity.Usuario;
+
+@ManagedBean(name="bUsuario")
+@RequestScoped
+public class UsuariosBean {
+
+	private Usuario usuario;
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
+	public String adicionarUsuario() {
+		try {
+			
+		} catch (Exception e) {
+			return "erro";
+		}
+	}
+}

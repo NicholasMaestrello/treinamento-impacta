@@ -1,0 +1,8 @@
+// definindo variaveis
+
+let nome;
+let idade;
+
+let mensagem = `Nome : ${nome} idade : ${idade}`;
+
+alert(mensagem);

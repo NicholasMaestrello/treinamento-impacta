@@ -1,0 +1,16 @@
+// definindo variaveis
+
+let nome = document.getElementById("nome");
+let idade = document.getElementById("idade"); 
+
+let button = document.getElementById("button");
+
+button.addEventListener("click", displayDate);
+function displayDate(){
+	let mensagem = `Nome : ${nome} idade : ${idade}`;
+	alert(mensagem);
+}
+
+
+
+

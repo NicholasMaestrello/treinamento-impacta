@@ -1,0 +1,14 @@
+package br.com.seniorsolution.entidades;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Escola {
+	private int id;
+	private String descricao;
+	private String endereco;
+	private Date dataFundacao;
+	
+	private List<Curso> cursos = new ArrayList<>();
+}

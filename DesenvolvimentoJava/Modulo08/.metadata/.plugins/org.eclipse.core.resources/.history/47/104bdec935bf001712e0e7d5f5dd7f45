@@ -1,0 +1,9 @@
+package br.com.seniorsolution.formaok;
+
+public class Artigo {
+
+	private String titulo;
+	private String conteudo;
+	private int paginas;
+	private Pessoa autor;
+}

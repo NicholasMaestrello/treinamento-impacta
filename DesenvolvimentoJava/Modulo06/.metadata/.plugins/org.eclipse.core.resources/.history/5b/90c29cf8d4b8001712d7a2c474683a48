@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gestão de produtos</title>
+<link href="css/estilo.css" rel="stylesheet">
+<link href="css/menu.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul class="menu" id="menuTopo">
+				<li><a href="#">A empresa</a></li>
+				<li><a href="produtos.html">Produtos</a></li>
+				<li><a href="localizacao.html">Localizacao</a></li>
+				<li><a href="trabalhe_conosco.html">Trabalhe conosco</a></li>
+				<li class="icon"><a href="javascript:void(0)"
+					onclick="mostrarMenu()"> &#9776; </a></li>
+			</ul>
+		</nav>
+	</header>
+</body>
+</html>

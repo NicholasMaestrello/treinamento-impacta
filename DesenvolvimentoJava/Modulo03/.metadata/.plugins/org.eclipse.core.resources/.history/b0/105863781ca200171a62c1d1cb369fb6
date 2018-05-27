@@ -1,0 +1,52 @@
+package br.com.seniorsolution.aplicacao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.swing.JOptionPane;
+
+import br.com.seniorsolution.entidade.Forum;
+import br.com.seniorsolution.entidade.Usuario;
+import br.com.seniorsolution.helper.ForumHelper;
+
+public class AppForum {
+	public static void main(String[] args) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpaForum");
+		
+		EntityManager em = emf.createEntityManager();
+		
+		try {
+			Forum forum = new Forum();
+			ForumHelper dao = new ForumHelper(em);
+			
+			forum.setAssunto("projeto LEgal");
+			forum.setDescricao("Teste exemplar");
+//			forum.setAssunto("problemas com MAVEN");
+//			forum.setDescricao("Busca de ajuda na solução de problemas");
+//			
+////			criando dois usuarios e e fazendo o vinculo ao forum recem criado
+//			Usuario us1 = new Usuario();
+//			us1.setNome("Gerson");
+//			us1.setEmail("gerson@mail.com");
+//			us1.setForum(forum);
+//			
+//			Usuario us2 = new Usuario();
+//			us2.setNome("Ana Maria");
+//			us2.setEmail("anamaria@mail.com");
+//			us2.setForum(forum);
+//
+////			adicionamos os dois usuario a lista de usuarios
+////			do objeto forum
+//			forum.getUsuarios().add(us1);
+//			forum.getUsuarios().add(us2);
+			
+			dao.salvar(forum);
+			
+			System.out.println("ok");
+			JOptionPane.showMessageDialog(null, "Forum incluido com sucesso !");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

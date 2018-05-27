@@ -1,0 +1,12 @@
+package br.com.seniorsolution.application;
+
+import br.com.seniorsolution.dao.GenericDao;
+import br.com.seniorsolution.entidades.Cliente;
+
+public class Teste {
+	public static void main(String[] args) {
+		GenericDao<Cliente> dao = new GenericDao<>(Cliente.class);
+		
+		System.out.println(dao.buscar(200));
+	}
+}

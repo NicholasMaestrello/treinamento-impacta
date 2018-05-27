@@ -1,0 +1,13 @@
+package br.com.seniorsolution.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class CursoController {
+
+	@RequestMapping(value= {"/curso/cadastro"})
+	public String incluir() {
+		
+	}
+}

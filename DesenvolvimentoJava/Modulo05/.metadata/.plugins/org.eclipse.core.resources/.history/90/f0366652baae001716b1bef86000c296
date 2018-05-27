@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Lista de Livros</title>
+</h:head>
+<h:body>
+
+	<ui:composition template="layout.xhtml">
+		<ui:define name="conteudo">
+			<h1>Lista de livros no banco de dados</h1>
+
+			<h:link value="Voltar para menu" outcome="menu"></h:link>
+			<h:form>
+				<h:dataTable value="#{bLivro.listaLivros}" var="livro"
+					styleClass="tabela" headerClass="cabecalho"
+					columnClasses="col1, col2, col3, col4">
+					<h:column>
+						<f:facet name="header">
+					CÓDIGO
+				</f:facet>
+						<h:outputText value="#{livro.codigo}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+					TITULO
+				</f:facet>
+						<h:outputText value="#{livro.titulo}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+					AUTOR
+				</f:facet>
+						<h:outputText value="#{livro.autor}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+					DATA PUBLICACAO
+				</f:facet>
+						<h:outputText value="#{livro.dataPublicacao}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+					PREÇO
+				</f:facet>
+						<h:outputText value="#{livro.preco}">
+							<f:convertNumber type="currency" />
+						</h:outputText>
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+					IMAGEM
+				</f:facet>
+						<h:graphicImage value="imagem?id=#{livro.codigo}" width="200" />
+					</h:column>
+				</h:dataTable>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

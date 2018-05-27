@@ -1,0 +1,14 @@
+package br.com.seniorsolution.decorator;
+
+public class TesteEmissorDecorator {
+
+	public static void main(String[] args) {
+		String mensagem = "#####";
+		
+		Emissor basico = new EmissorBasico();
+		basico.enviar(mensagem);
+		System.out.println();
+		
+		
+	}
+}

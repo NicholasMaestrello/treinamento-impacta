@@ -1,0 +1,27 @@
+package br.com.seniorsolution.bridge;
+
+import java.io.FileWriter;
+
+public class Recibo implements Documento {
+
+	private String emissor;
+	private String favorecido;
+	private double valor;
+	
+	public Recibo(String emissor, String favorecido, double valor){
+		this.emissor = emissor;
+		this.favorecido = favorecido;
+		this.valor = valor;
+	}
+	
+	@Override
+	public void gerarArquivo() {
+		// TODO Auto-generated method stub
+		try {
+			FileWriter = writer = new FileWriter("C:/Desenvolvimento_Java/Modulo08/recibo.txt");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+}

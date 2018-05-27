@@ -1,0 +1,11 @@
+// definindo variaveis
+
+let nome = document.getElementById("nome");
+let idade = document.getElementById("idade"); 
+
+let button = document.getElementById("button");
+
+let mensagem = `Nome : ${nome} idade : ${idade}`;
+
+alert(mensagem);
+

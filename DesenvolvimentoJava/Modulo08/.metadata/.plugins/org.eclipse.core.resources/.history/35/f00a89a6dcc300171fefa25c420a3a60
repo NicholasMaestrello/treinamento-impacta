@@ -1,0 +1,23 @@
+package br.com.seniorsolution.bridge;
+
+import java.io.FileWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class GeradorArquivosTxt implements GeradorArquivos {
+
+	@Override
+	public void gerar(String conteudo) {
+		// TODO Auto-generated method stub
+		try {
+			String arquivo = new SimpleDateFormat("yyyMMdd-HHmmss-recibo").format(new Date());
+			FileWriter writer = new FileWriter("C:/Desenvolvimento_Java/Modulo08/" + arquivo +".txt");
+			writer.write(conteudo);
+			writer.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+
+}

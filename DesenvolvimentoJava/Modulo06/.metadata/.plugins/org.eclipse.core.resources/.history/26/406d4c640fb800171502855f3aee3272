@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Session storage - destino</h1>
+	<input type="button" id="ler" value="ler - sessionStorage" /><br/>
+	
+	<div id="resposta"></div>
+
+	<script type="text/javascript">
+		let ler = document.getElementById("ler")
+		ler.addEventListener('click', function(){
+			let texto = localStorage.getItem('session')
+			let resposta = document.getElementById('resposta')
+			resposta.innerHTML = `valor armazenad : ${texto}`
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Local storage</h1>
+	<label for="txt_origin">Escreva um texto :</label>
+	<input type="text" id="txt_origin"/><br/>
+	<input type="button" id="salvar" value="salvar - sessionStorage"><br/>
+
+	<a href="session_storage_destino.html">Visualizar destino</a>
+	
+	<input type="button" id="verificar" value="Verificar" /><br/>
+	<div id="resposta"></div>
+	<script type="text/javascript">
+		let salvar = document.getElementById("salvar")
+		let verificar = documente.getElementById("verificar")
+		
+		salvar.addEventListener('click', function(){
+			console.log("entrou")
+			let texto = document.getElementById("txt_origin").value
+			sessionStorage.setItem("session", texto)
+			alert(`valor : ${texto} adicionado com sucesso`)
+		})
+	</script>
+</body>
+</html>

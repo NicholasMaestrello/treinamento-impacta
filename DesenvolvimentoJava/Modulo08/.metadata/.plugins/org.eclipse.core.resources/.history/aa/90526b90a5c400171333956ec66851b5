@@ -1,0 +1,16 @@
+package br.com.seniorsolution.executaveis;
+
+import br.com.seniorsolution.entity.Aluno;
+import br.com.seniorsolution.entity.Curso;
+import br.com.seniorsolution.entity.Disciplina;
+
+public class Executavel1 {
+
+	public static void main(String[] args) {
+		Aluno aluno = new Aluno();
+		aluno.setNome("João");
+		aluno.setCurso(new Curso());
+		aluno.setRa("123456");
+		aluno.matricular(new Disciplina());
+	}
+}

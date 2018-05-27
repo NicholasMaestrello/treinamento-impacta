@@ -1,0 +1,15 @@
+package br.com.seniorsolution.formaok;
+
+public class AppArtigo {
+
+	public static void main(String[] args) {
+		Artigo artigo = new Artigo();
+		artigo.setTitulo("Design Patterns");
+		artigo.setConteudo("Existem diversos design patterns disponiveis");
+		artigo.setPaginas(2);
+		
+		Pessoa aluno = new Aluno();
+		
+		artigo.setAutor();
+	}
+}
